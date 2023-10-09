@@ -47,6 +47,7 @@ class UserDetailsViewController: UIViewController {
             case .success(let data):
                 self.decodeUserPicture(from: data)
             case .failure(let failure):
+                self.showErrorAlert(with: "Error", message: "Could not load user picture. Try again later.")
                 print(failure)
             }
         }

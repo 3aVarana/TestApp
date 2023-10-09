@@ -35,7 +35,13 @@
                             <constraint firstItem="NJ1-ed-Jpb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xiP-DW-kMv"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="CPU-Cv-yuU"/>
+                    <navigationItem key="navigationItem" id="CPU-Cv-yuU">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="plus" catalog="system" id="K4H-Vr-mFY">
+                            <connections>
+                                <action selector="addUser:" destination="BYZ-38-t0r" id="nT6-Ie-c1H"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="sUR-wv-FwM" id="caP-hG-lPU"/>
                     </connections>
@@ -64,6 +70,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

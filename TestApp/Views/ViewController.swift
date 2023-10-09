@@ -33,7 +33,9 @@ class ViewController: UIViewController {
             case .success(let users):
                 self.setUsers(users)
             case .failure(_):
+                // TODO: - Show alert with message
                 print("Failure")
+                self.showErrorAlert(with: "Error", message: "Could not connnect with server. Try again later.")
             }
         }
     }
@@ -44,8 +46,12 @@ class ViewController: UIViewController {
             self.tableView.reloadData()
         }
     }
-
-
+    
+    @IBAction func addUser(_ sender: UIBarButtonItem) {
+        // TODO: - Add User
+    }
+    
+    
 }
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
