@@ -53,4 +53,35 @@ class UserLoader {
         }
         task.resume()
     }
+    
+    func loadUsersPicture(from url: String, completion: @escaping (Result<Data, Swift.Error>) -> Void) {
+        guard let url = URL(string: url) else {
+            return
+        }
+        
+        let task = client.dataTask(with: url) { data, response, error in
+            if let error = error {
+                completion(.failure(error))
+                return
+            }
+            
+            guard let response = response as? HTTPURLResponse else {
+                completion(.failure(Error.UnexpecterResponse))
+                return
+            }
+            
+            guard response.statusCode == 200 else {
+                completion(.failure(Error.InvalidStatuCode))
+                return
+            }
+            
+            guard let data = data else {
+                completion(.failure(Error.EmptyData))
+                return
+            }
+            
+            completion(.success(data))
+        }
+        task.resume()
+    }
 }

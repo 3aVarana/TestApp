@@ -69,6 +69,7 @@ extension ViewController {
     func showUserDetailView(for index: Int) {
         let vc = UserDetailsViewController()
         vc.user = users[index]
+        vc.userLoader = userLoader
         navigationController?.pushViewController(vc, animated: true)
     }
 }
