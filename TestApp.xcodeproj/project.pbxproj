@@ -16,6 +16,7 @@
 		84CB5B572AD4969F006AD8DF /* TestAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CB5B562AD4969F006AD8DF /* TestAppTests.swift */; };
 		84CB5B612AD4969F006AD8DF /* TestAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CB5B602AD4969F006AD8DF /* TestAppUITests.swift */; };
 		84CB5B632AD4969F006AD8DF /* TestAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CB5B622AD4969F006AD8DF /* TestAppUITestsLaunchTests.swift */; };
+		84CB5B702AD497BA006AD8DF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CB5B6F2AD497BA006AD8DF /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		84CB5B5C2AD4969F006AD8DF /* TestAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84CB5B602AD4969F006AD8DF /* TestAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAppUITests.swift; sourceTree = "<group>"; };
 		84CB5B622AD4969F006AD8DF /* TestAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		84CB5B6F2AD497BA006AD8DF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				84CB5B482AD4969E006AD8DF /* Assets.xcassets */,
 				84CB5B4A2AD4969E006AD8DF /* LaunchScreen.storyboard */,
 				84CB5B4D2AD4969E006AD8DF /* Info.plist */,
+				84CB5B6F2AD497BA006AD8DF /* User.swift */,
 			);
 			path = TestApp;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84CB5B702AD497BA006AD8DF /* User.swift in Sources */,
 				84CB5B442AD4969C006AD8DF /* ViewController.swift in Sources */,
 				84CB5B402AD4969C006AD8DF /* AppDelegate.swift in Sources */,
 				84CB5B422AD4969C006AD8DF /* SceneDelegate.swift in Sources */,
