@@ -18,6 +18,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         setupTableView()
         loadUsers()
+        title = "Users"
     }
     
     private func setupTableView() {
@@ -62,14 +63,28 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         showUserDetailView(for: indexPath.row)
     }
     
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { [weak self] _, _, completion in
+            guard let self = self else { return }
+            self.deleteUser(for: indexPath)
+            completion(true)
+        }
+        
+        return UISwipeActionsConfiguration(actions: [deleteAction])
+    }
     
 }
 
 extension ViewController {
-    func showUserDetailView(for index: Int) {
+    private func showUserDetailView(for index: Int) {
         let vc = UserDetailsViewController()
         vc.user = users[index]
         vc.userLoader = userLoader
         navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    private func deleteUser(for indexPath: IndexPath) {
+        users.remove(at: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: .left)
     }
 }
